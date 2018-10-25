@@ -8,10 +8,7 @@ export EDITOR=vim
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(date time)
+ZSH_THEME="robbyrussell"
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -88,31 +85,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias gs="git status"
 alias gp="git push"
 alias gc="git commit -am"
 alias gnb="git checkout master && git checkout -b"
-alias gtf="cd ~/dev/front/"
-alias gtr="cd ~/dev/ruby/"
-alias gtp="cd ~/dev/python/"
 alias gtd="cd ~/Documents/"
-alias r="./bin/rails"
-alias rgmi="./bin/rails g migration"
-alias rdm="./bin/rails db:migrate RAILS_ENV=test && ./bin/rails db:migrate"
-alias cdd="cap dev deploy"
-alias cpd="cap production deploy"
-alias start-services="brew services start postgresql && brew services start redis && brew services start elasticsearch@2.4 && brew services start nginx"
-alias stop-services="brew services stop postgresql && brew services stop redis && brew services stop elasticsearch@2.4 && brew services stop nginx && brew services stop redis"
 alias python="python3"
-alias rake='noglob rake'
 alias docker='pgrep com.docker.hyperkit &> /dev/null || (open /Applications/Docker.app && until docker info &> /dev/null ; do sleep 1; done) && docker'
 alias docker-compose='pgrep com.docker.hyperkit &> /dev/null || (open /Applications/Docker.app && until docker info &> /dev/null ; do sleep 1; done) && docker-compose'
 
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
-export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
