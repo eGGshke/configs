@@ -5,25 +5,25 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 brew "boost"
-brew "gettext", link: true
 brew "go"
 brew "dep"
 brew "dnsmasq"
 brew "sqlite", args: ["with-json1"]
+brew "python", link: false
 brew "docker-compose"
 brew "exercism"
+brew "libogg"
+brew "libvorbis"
+brew "sdl2"
 brew "ffmpeg"
 brew "libxml2"
-brew "python", link: false
 brew "gnupg"
 brew "gradle"
 brew "graphicsmagick", args: ["with-ghostscript"]
 brew "graphviz"
 brew "htop"
-brew "libogg"
 brew "postgresql", restart_service: true
 brew "libpqxx"
-brew "libvorbis"
 brew "maven"
 brew "nginx", args: ["with-passenger"], restart_service: true
 brew "node"
@@ -33,12 +33,10 @@ brew "php@7.1"
 brew "poppler"
 brew "postgis"
 brew "redis", restart_service: true
-brew "sdl2"
 brew "telnet"
 brew "tmux"
 brew "tree"
 brew "wget"
-cask "atom"
 cask "font-hack-nerd-font"
 cask "java8"
 cask "kitematic"
