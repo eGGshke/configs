@@ -101,7 +101,6 @@ alias refreshPM="pan migrate:fresh && pan db:seed && pan orchid:admin admin admi
 alias rn="sudo nginx -s stop && sudo nginx"
 alias python="python3.7"
 alias runSeleniumChrome="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/java -Dwebdriver.chrome.driver="chromedriver" -jar selenium-server-standalone-3.9.1.jar"
-alias runStoreService="php -S localhost:8080 -t /Users/daniilpetrov/dev/work/StoreService/public"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
