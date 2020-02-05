@@ -8,8 +8,9 @@ export EDITOR=vim
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="muse"
 
+ZSH_THEME="af-magic"
+# SOBOLE_THEME_MODE=light
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,9 +97,15 @@ alias docker='pgrep com.docker.hyperkit &> /dev/null || (open /Applications/Dock
 alias docker-compose='pgrep com.docker.hyperkit &> /dev/null || (open /Applications/Docker.app && until docker info &> /dev/null ; do sleep 1; done) && docker-compose'
 alias cda="composer dump-autoload -o"
 alias pan="php artisan"
+alias refreshPM="pan migrate:fresh && pan db:seed && pan orchid:admin admin admin@admin.com password"
+alias rn="sudo nginx -s stop && sudo nginx"
+alias python="python3.7"
+alias runSeleniumChrome="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/java -Dwebdriver.chrome.driver="chromedriver" -jar selenium-server-standalone-3.9.1.jar"
+alias runStoreService="php -S localhost:8080 -t /Users/daniilpetrov/dev/work/StoreService/public"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+

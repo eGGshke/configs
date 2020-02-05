@@ -17,11 +17,13 @@ endif
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Custom Line numbers
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+
 " Add vundle to update it like any other bundle
 Bundle 'gmarik/vundle'
 " Some support functions used by delimitmate, and snipmate
 Bundle 'vim-scripts/tlib'
-
 
 " Improve bookmarks in vim
 " Allow word for bookmark marks, and nice quickfix window with bookmark list
@@ -34,9 +36,6 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 
 " Default snippets. for snipmate
 Bundle 'honza/vim-snippets'
-
-" Colorscheme solarazied for vim
-Bundle 'altercation/vim-colors-solarized'
 
 " Allow autoclose paired characters like [,] or (,),
 " and add smart cursor positioning inside it,
@@ -110,6 +109,17 @@ Bundle 'jszakmeister/vim-togglecursor'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Golang plugin
+Plugin 'fatih/vim-go'
+Plugin 'Shougo/neocomplete.vim'
+
+" Vue plugin
+Plugin 'posva/vim-vue'
+
+" Themes:
+Plugin 'morhetz/gruvbox'
+colorscheme gruvbox
+
 " Improve javascritp syntax higlighting, needed for good folding,
 " and good-looking javascritp code
 Bundle 'jelera/vim-javascript-syntax'
@@ -147,6 +157,11 @@ nnoremap <silent> <c-t> :FufFile **/<CR>
 " Tell NERDTree to display hidden files on startup
 let NERDTreeShowHidden=1
 let NERDTreeMapOpenInTab='t'
+
+" Start NERDTree
+autocmd VimEnter * NERDTree
+" Jump to the main window.
+autocmd VimEnter * wincmd p
 
 " Display current file in the NERDTree ont the left and key map
 nmap <silent> <leader>f :NERDTreeFind<CR>
@@ -284,30 +299,15 @@ nmap <silent> <leader>tr :TernRefs<CR>
 " Find smart variable rename
 nmap <silent> <leader>tn :TernRename<CR>
 
-"-------------------------
-" Solarized
-Plugin 'bf4/vim-dark_eyes'
-colorscheme dark_eyes
 
-" Without this solarized have dark background in my terminal
-
-" Setting up light color scheme
 set background=dark
 syntax on
 syntax enable
 
-" Use solarized colorscheme
-" colorscheme badwolf
 let g:badwolf_darkgutter = 1
 let g:solarized_termtrans=1
 let g:badwolf_tabline = 2
 
-
-"-------------------------
-" vim-airline
-
-" Colorscheme for airline
-let g:airline_theme='luna'
 
 " Set custom left separator
 let g:airline_left_sep = '▶'
@@ -333,7 +333,11 @@ let g:airline_section_x = ''
 "--------------------------------------------------
 " General options
 
+set number relativenumber
+
 set fileformats=unix
+set ts=4 sw=4
+
 
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc secure
@@ -438,9 +442,6 @@ set nostartofline
 
 " Disable wrapping long string
 set nowrap
-
-" Display Line numbers
-set number
 
 " Highlight line with cursor
 set cursorline
