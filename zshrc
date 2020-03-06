@@ -97,7 +97,6 @@ alias docker='pgrep com.docker.hyperkit &> /dev/null || (open /Applications/Dock
 alias docker-compose='pgrep com.docker.hyperkit &> /dev/null || (open /Applications/Docker.app && until docker info &> /dev/null ; do sleep 1; done) && docker-compose'
 alias cda="composer dump-autoload -o"
 alias pan="php artisan"
-alias refreshPM="pan migrate:fresh && pan db:seed && pan orchid:admin admin admin@admin.com password"
 alias rn="sudo nginx -s stop && sudo nginx"
 alias python="python3.7"
 alias runSeleniumChrome="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/java -Dwebdriver.chrome.driver="chromedriver" -jar selenium-server-standalone-3.9.1.jar"
